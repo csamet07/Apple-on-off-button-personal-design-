@@ -9,20 +9,40 @@
 </head>
 <body>
     <div id="menu" class="w-1/5 m-auto mt-10 rounded">
-        <div class="flex border border-black rounded">
-            <div class="mx-1 w-3/4 py-1 px-2">
-                Aktiviteler
+        <div class="border border-black rounded">
+            <div class="flex">
+                <div class="mx-1 w-3/4 py-1 px-2">
+                    Aktiviteler
+                </div>
+                <div class="bg-red-600 rounded-full h-4 my-auto w-1/6 relative">
+                    <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
+                </div>
             </div>
-            <div class="bg-red-600 rounded-full h-4 my-auto w-1/6 relative">
-                <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
+            <div class="border-t border-black px-3 py-1 menu-body hidden">
+                <ul>
+                    <li>
+                        <a href="#">Aktivite-1</a>
+                    </li>
+                    <li>
+                        <a href="#">Aktivite-2</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="flex border border-black rounded mt-5">
-            <div class="mx-1 w-3/4 py-1 px-2">
-                Aktiviteler
+        <div class="border border-black rounded mt-5">
+            <div class="flex">
+                <div class="mx-1 w-3/4 py-1 px-2">
+                    Konaklama
+                </div>
+                <div class="bg-red-600 rounded-full h-4 my-auto w-1/6 relative">
+                    <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
+                </div>
             </div>
-            <div class="bg-red-600 rounded-full h-4 my-auto w-1/6 relative">
-                <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
+            <div class="border-t border-black px-3 py-1 menu-body hidden">
+                    <ul>
+                        <li>konaklama-1</li>
+                        <li>konaklama-2</li>
+                    </ul>
             </div>
         </div>
     </div>
@@ -34,20 +54,23 @@
     <script>
         $(document).ready(function(){
             $('#menu').click(function(e){
-                var gelen = e.target;
-                if($(gelen).hasClass('toggle-apple')){
-                    if($(gelen).hasClass('right-0')){
-                        $(gelen).removeClass('right-0');
-                        $(gelen).parent().removeClass('bg-green-600');
-                        $(gelen).parent().addClass('bg-red-600');
-                        $(gelen).addClass('border-red-600');
-                        $(gelen).removeClass('border-green-600');
+                var gelen = $(e.target);
+                var bodyMenu = gelen.parent().parent().parent().find('.menu-body');
+                if(gelen.hasClass('toggle-apple')){
+                    if(gelen.hasClass('right-0')){
+                        gelen.removeClass('right-0');
+                        gelen.parent().removeClass('bg-green-600');
+                        gelen.parent().addClass('bg-red-600');
+                        gelen.addClass('border-red-600');
+                        gelen.removeClass('border-green-600');
+                        bodyMenu.addClass('hidden');
                     }else{
-                        $(gelen).addClass('right-0');
-                        $(gelen).parent().addClass('bg-green-600');
-                        $(gelen).parent().removeClass('bg-red-600');
-                        $(gelen).addClass('border-green-600');
-                        $(gelen).removeClass('border-red-600');
+                        gelen.addClass('right-0');
+                        gelen.parent().addClass('bg-green-600');
+                        gelen.parent().removeClass('bg-red-600');
+                        gelen.addClass('border-green-600');
+                        gelen.removeClass('border-red-600');
+                        bodyMenu.removeClass('hidden');
                     }
                 }
             });            

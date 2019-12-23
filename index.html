@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>Apple Toggle</title>
 </head>
 <body>
     <div id="menu" class="w-1/5 m-auto mt-10 rounded">
-        <div class="border border-black rounded">
+        <div class="border border-black border-b-0">
             <div class="flex">
                 <div class="mx-1 w-3/4 py-1 px-2">
                     Aktiviteler
@@ -18,33 +19,49 @@
                     <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
                 </div>
             </div>
-            <div class="border-t border-black px-3 py-1 menu-body hidden">
+            <div class=" px-2 py-1 menu-body hidden">
                 <ul>
-                    <li>
-                        <a href="#">Aktivite-1</a>
+                    <li class="my-2 border rounded border-gray-800 px-3 py-1 text-sm">
+                        <a href="#" class="">Aktivite-1</a>
+                        <a href="#" class="float-right">
+                            <i class="fas fa-plus"></i>
+                        </a>
                     </li>
-                    <li>
+                    <li class="my-2 border rounded border-gray-800 px-3 py-1 text-sm">
                         <a href="#">Aktivite-2</a>
+                        <a href="#" class="float-right">
+                            <i class="fas fa-plus"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="border border-black rounded mt-5">
-            <div class="flex">
-                <div class="mx-1 w-3/4 py-1 px-2">
-                    Konaklama
+        <div class="mt-5 border border-black border-b-0">
+                <div class="flex">
+                    <div class="mx-1 w-3/4 py-1 px-2">
+                        Konaklama
+                    </div>
+                    <div class="bg-red-600 rounded-full h-4 my-auto w-1/6 relative">
+                        <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
+                    </div>
                 </div>
-                <div class="bg-red-600 rounded-full h-4 my-auto w-1/6 relative">
-                    <span class="absolute bg-white border border-red-600 rounded-full w-3/6 h-4 cursor-pointer toggle-apple"></span>
-                </div>
-            </div>
-            <div class="border-t border-black px-3 py-1 menu-body hidden">
+                <div class=" px-2 py-1 menu-body hidden">
                     <ul>
-                        <li>konaklama-1</li>
-                        <li>konaklama-2</li>
+                        <li class="my-1 border rounded border-gray-800 px-3 py-1 text-sm">
+                            <a href="#" class="">Aktivite-1</a>
+                            <a href="#" class="float-right">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </li>
+                        <li class="my-1 border rounded border-gray-800 px-3 py-1 text-sm">
+                            <a href="#">Aktivite-2</a>
+                            <a href="#" class="float-right">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </li>
                     </ul>
+                </div>
             </div>
-        </div>
     </div>
 
 
